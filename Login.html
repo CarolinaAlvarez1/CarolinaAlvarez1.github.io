@@ -1,37 +1,3 @@
-<?php
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-    if (!isset($dados['g-recaptcha-response']) || empty($dados['g-recaptcha-response'])) {
-        die("Erro: reCAPTCHA não preenchido.");
-    }
-    
-    $secretKey = "6LdudxErAAAAAHyHUomIVaq4gxU93x2_GfWawKkK";
-    $token = $dados['g-recaptcha-response'];
-    $remoteIp = $_SERVER['REMOTE_ADDR'];
-    $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$token&remoteip=$remoteIp";
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($ch);
-    curl_close($ch);          
-    $resultado = json_decode($response, true);
-    if (!$resultado['success']) {
-        die("Erro: Falha na verificação do reCAPTCHA.");
-    }
-    if ($resultado['score'] < 0.5) {
-        die("Erro: A validação automática identificou comportamento suspeito.");
-    }
-    if (!empty($_POST['login']) && !empty($_POST['senha'])) {
-        $login = trim(htmlspecialchars($_POST['login']));
-        $_SESSION['login'] = $login;
-        header("Location: ValidaLogin.php");
-        exit(); 
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
