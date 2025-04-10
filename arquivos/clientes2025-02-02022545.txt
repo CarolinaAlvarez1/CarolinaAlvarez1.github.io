@@ -1,0 +1,6 @@
+Alfreds Futterkiste maria@example.com
+Centro comercial Moctezuma teste@example.com
+Ernst Handel roland@example.com
+Island Trading helen@example.com
+Laughing Bacchus Winecellars yoshi@example.com
+Magazzini Alimentari Riuniti giovanni@example.com

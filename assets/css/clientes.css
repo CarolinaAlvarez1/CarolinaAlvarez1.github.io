@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #023047
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start; /* Altera de center para flex-start */
+    width: 100%;
+    /* min-height: 100vh; Permite que o conteúdo cresça além da altura da tela */
+    background-color: #F5FFFA;
+    overflow-y: auto; /* Habilita o scroll caso necessário */
+}
+
+
+.formClientes {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 40px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    gap: 5px;
+    width: 90%; /* Ajusta a largura */
+    max-width: 600px; /* Define um limite de largura */
+    min-height: 300px; /* Define um tamanho mínimo */
+    height: auto; /* Permite que a altura cresça conforme o conteúdo */
+    max-height: 80vh; /* Evita que fique muito alto */
+    overflow-y: auto; /* Adiciona barra de rolagem quando necessário */
+}
+
+
+.areaLogin img {
+    width: 420px;
+}
+
+.formClientes h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.3em;
+    text-align: center;
+}
+
+.formClientes p {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.formClientes input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+.dropdown{
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+}
+
+.inputs-container {
+    display: flex; /* Organiza os inputs lado a lado */
+    gap: 10px; /* Espaço entre os inputs */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.input-codigo {
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all linear 160ms;
+}
+
+.input-codigo:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.separator {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+
+.formClientes input:focus {
+    border: 1px solid #f72585;
+}
+
+.formClientes label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formClientes a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #555;
+    transition: all linear 160ms;
+}
+
+.formClientes a:hover {
+    color: #f72585;
+}
+
+.btn {
+    background-color: #f72585;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    width: 100px;
+    height: 30px;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #ff0676;
+
+}
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr.selected {
+    background-color: #87CEFA !important;
+}

@@ -1,0 +1,116 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    position: fixed;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+/* Sidebar Expandida */
+.sidebar.active {
+    width: 200px;
+}
+
+/* Botão de Expansão */
+.toggle-btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Lista de Links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Itens da Sidebar */
+.sidebar ul li {
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+/* Links */
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Ícones */
+.sidebar ul li a i {
+    font-size: 20px;
+}
+
+/* Ocultar texto quando recolhido */
+.sidebar:not(.active) ul li a span {
+    display: none;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    margin-left: 60px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    width: 100%;
+}
+
+.sidebar.active ~ .main-content {
+    margin-left: 200px;
+}
+
+/* Cartões de Estatísticas */
+.stats-cards {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+    }
+
+    .sidebar.active {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .sidebar.active ~ .main-content {
+        margin-left: 200px;
+    }
+}
