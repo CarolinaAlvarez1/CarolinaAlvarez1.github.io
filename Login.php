@@ -1,5 +1,28 @@
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Acessando as variáveis
+$host = $_ENV['DB_HOST'];
+$usuario = $_ENV['DB_USERNAME'];
+$senha = $_ENV['DB_PASSWORD'];
+$banco = $_ENV['DB_DATABASE'];
+$porta = $_ENV['DB_PORT'];
+
+$conn = new mysqli($host, $usuario, $senha, $banco, $porta);
+
+if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
+}
+echo "Conectado com sucesso!";
+
 session_start();
+$sql = "SELECT * FROM usuarios";
+$stmt = $conn->prepare($sql);
+var_dump($stmt['CPF']);
+exit();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
