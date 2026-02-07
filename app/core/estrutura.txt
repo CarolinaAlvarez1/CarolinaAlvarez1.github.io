@@ -1,0 +1,79 @@
+biblioteca/
+│
+├── public/
+│   ├── index.php              # Front Controller
+│   ├── .htaccess              # Reescrita de URL
+│   └── assets/
+│       ├── css/
+│       ├── js/
+│       └── img/
+│
+├── app/
+│   ├── Core/
+│   │   ├── Controller.php     # Controller base
+│   │   ├── Model.php          # Model base
+│   │   ├── Router.php         # Roteamento
+│   │   ├── View.php           # Renderização de views
+│   │   └── Database.php       # Conexão com banco
+│   │
+│   ├── Controllers/
+│   │   ├── AuthController.php         # Login / Logout
+│   │   ├── DashboardController.php    # Tela inicial
+│   │   ├── LivroController.php        # Acervo / Novo / Editar
+│   │   ├── EmprestimoController.php   # Empréstimos
+│   │   ├── UsuarioController.php      # Usuários
+│   │   └── ConfiguracaoController.php # Configurações
+│   │
+│   ├── Models/
+│   │   ├── Usuario.php
+│   │   ├── Livro.php
+│   │   ├── Emprestimo.php
+│   │   └── Categoria.php
+│   │
+│   ├── Views/
+│   │   ├── layout/
+│   │   │   ├── header.php
+│   │   │   ├── sidebar.php
+│   │   │   ├── footer.php
+│   │   │   └── main.php
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── login.php
+│   │   │   └── esqueci_senha.php
+│   │   │
+│   │   ├── dashboard/
+│   │   │   └── index.php
+│   │   │
+│   │   ├── livros/
+│   │   │   ├── index.php      # Acervo
+│   │   │   ├── novo.php
+│   │   │   └── editar.php
+│   │   │
+│   │   ├── emprestimos/
+│   │   │   ├── index.php
+│   │   │   └── novo.php
+│   │   │
+│   │   ├── usuarios/
+│   │   │   ├── index.php
+│   │   │   ├── novo.php
+│   │   │   └── editar.php
+│   │   │
+│   │   └── configuracoes/
+│   │       └── index.php
+│   │
+│   └── Helpers/
+│       ├── Auth.php            # Validação de sessão
+│       ├── Redirect.php
+│       └── Flash.php
+│
+├── config/
+│   ├── config.php              # Configurações gerais
+│   └── database.php            # Credenciais do banco
+│
+├── storage/
+│   ├── logs/
+│   └── cache/
+│
+├── vendor/                     # Composer
+│
+└── .env                        # Variáveis de ambiente
