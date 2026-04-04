@@ -154,7 +154,7 @@
                 <li><a class="dropdown-item py-2" href="#"><i class="fas fa-id-card me-2"></i> Perfil</a></li>
                 <li><a class="dropdown-item py-2" href="#"><i class="fas fa-cog me-2"></i> Ajustes</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item py-2 text-danger" href="logout.php"><i class="fas fa-power-off me-2"></i> Sair</a></li>
+                <li><a class="dropdown-item py-2 text-danger" href="index.html"><i class="fas fa-power-off me-2"></i> Sair</a></li>
             </ul>
         </div>
     </header>
