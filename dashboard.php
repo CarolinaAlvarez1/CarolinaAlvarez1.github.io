@@ -6,13 +6,20 @@ $usuarios_cadastrados = 45; // Simulação
 ?>
 
 <style>
-
+body {
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+}
     .welcome-header {
         margin-bottom: 30px;
         background: #fff;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        background: linear-gradient(135deg, #ffffff, #f1f5f9);
+        border-left: 5px solid #22c55e;
+    }
+    .welcome-header h3{
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
     }
     .stat-card {
         border: none;
@@ -36,6 +43,8 @@ $usuarios_cadastrados = 45; // Simulação
   color: #fff;
   transition: all 0.3s ease;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(59,130,246,0.9), rgba(37,99,235,0.9));
 }
 
 /* Gradientes mais bonitos */
@@ -57,16 +66,10 @@ $usuarios_cadastrados = 45; // Simulação
 
 /* Hover */
 .card-dashboard:hover {
-  transform: translateY(-5px);
+   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
-.btn-modern {
-  border-radius: 10px;
-  padding: 10px 18px;
-  font-weight: 500;
-  border: none;
-  transition: all 0.3s ease;
-}
+
 
 /* Botões */
 .btn-blue {
@@ -85,16 +88,31 @@ $usuarios_cadastrados = 45; // Simulação
   color:  #fff;
 }
 
-/* Hover */
-.btn-modern:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+.btn-modern {
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-modern::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: rgba(255,255,255,0.2);
+  transition: 0.4s;
+}
+
+.btn-modern:hover::after {
+  left: 100%;
 }
 </style>
 
 <div class="welcome-header">
     <h3 class="mb-1">Bem-vindo</h3>
-    <p class="text-muted mb-0">Hoje é sexta-feira, 03 de abril de 2026. Veja o resumo do acervo abaixo.</p>
+    <p class="text-muted mb-0">Hoje é sabado, 04 de abril de 2026. Veja o resumo do acervo abaixo.</p>
 </div>
 
 <div class="row g-4">
